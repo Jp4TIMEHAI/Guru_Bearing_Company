@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, Factory, Truck, Wrench, ShieldCheck, ChevronR
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../components/AnimatedSection';
 import MouseParallax from '../components/MouseParallax';
 import MagneticHover from '../components/MagneticHover';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const products = [
@@ -35,42 +36,56 @@ export default function Home() {
         {/* Diagonal industrial slash */}
         <div className="absolute top-0 right-0 w-[800px] h-full bg-secondary/30 transform skew-x-[-25deg] translate-x-32" />
 
-        <StaggerContainer className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 py-12" delayChildren={0.1}>
-          <div className="max-w-4xl relative">
-            <StaggerItem direction="up">
-              <div className="inline-flex items-center gap-3 px-4 py-1.5 border border-white/10 bg-white/5 mb-8 rounded-sm">
-                <span className="flex h-2 w-2 bg-accent animate-pulse"></span>
-                <span className="text-xs font-bold tracking-widest text-neutral-300 uppercase">ISO 9001 Certified Bearings</span>
-              </div>
-            </StaggerItem>
+        <StaggerContainer className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 py-12 lg:py-24" delayChildren={0.1}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-3xl relative">
+              <StaggerItem direction="up">
+                <div className="inline-flex items-center gap-3 px-4 py-1.5 border border-white/10 bg-white/5 mb-8 rounded-sm">
+                  <span className="flex h-2 w-2 bg-accent animate-pulse"></span>
+                  <span className="text-xs font-bold tracking-widest text-neutral-300 uppercase">ISO 9001 Certified Bearings</span>
+                </div>
+              </StaggerItem>
 
-            <StaggerItem direction="up">
-              <h1 className="text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter text-white mb-6 leading-[0.95] uppercase">
-                <span className="block text-neutral-100">Absolute</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-red-500">Precision.</span>
-              </h1>
-            </StaggerItem>
+              <StaggerItem direction="up">
+                <h1 className="text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter text-white mb-6 leading-[0.95] uppercase">
+                  <span className="block text-neutral-100">Absolute</span>
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-red-500">Precision.</span>
+                </h1>
+              </StaggerItem>
 
-            <StaggerItem direction="up">
-              <p className="text-xl md:text-2xl text-neutral-400 mb-12 max-w-2xl leading-relaxed font-medium">
-                Guru Bearing Company engineers and supplies high-performance industrial components. 
-                Built for extreme endurance. Designed for zero downtime.
-              </p>
-            </StaggerItem>
+              <StaggerItem direction="up">
+                <p className="text-xl md:text-2xl text-neutral-400 mb-12 max-w-2xl leading-relaxed font-medium">
+                  Guru Bearing Company engineers and supplies high-performance industrial components. 
+                  Built for extreme endurance. Designed for zero downtime.
+                </p>
+              </StaggerItem>
 
-            <StaggerItem direction="up">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <MagneticHover strength={0.2}>
-                  <Link href="/quote" className="inline-flex items-center justify-center px-8 py-5 text-sm font-bold uppercase tracking-widest text-white bg-accent hover:bg-accent-dark transition-all rounded-sm">
-                    Request a Quote
-                    <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </MagneticHover>
-                <MagneticHover strength={0.2}>
-                  <Link href="/products" className="inline-flex items-center justify-center px-8 py-5 text-sm font-bold uppercase tracking-widest text-neutral-100 bg-white/5 border border-white/10 hover:bg-white/10 transition-all rounded-sm">
-                    View Specifications
-                  </Link>
-                </MagneticHover>
+              <StaggerItem direction="up">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <MagneticHover strength={0.2}>
+                    <Link href="/quote" className="inline-flex items-center justify-center px-8 py-5 text-sm font-bold uppercase tracking-widest text-white bg-accent hover:bg-accent-dark transition-all rounded-sm">
+                      Request a Quote
+                      <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </MagneticHover>
+                  <MagneticHover strength={0.2}>
+                    <Link href="/products" className="inline-flex items-center justify-center px-8 py-5 text-sm font-bold uppercase tracking-widest text-neutral-100 bg-white/5 border border-white/10 hover:bg-white/10 transition-all rounded-sm">
+                      View Specifications
+                    </Link>
+                  </MagneticHover>
+                </div>
+              </StaggerItem>
+            </div>
+
+            <StaggerItem direction="left" className="hidden lg:block relative">
+              <div className="relative w-full aspect-square">
+                <motion.img 
+                  animate={{ y: [0, -20, 0] }}
+                  transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                  src="/images/hero-bearing.png" 
+                  alt="Precision Industrial Bearing" 
+                  className="w-full h-full object-contain drop-shadow-[0_0_80px_rgba(153,27,27,0.3)] scale-[1.2]" 
+                />
               </div>
             </StaggerItem>
           </div>
