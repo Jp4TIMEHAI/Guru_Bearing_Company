@@ -13,8 +13,9 @@ export default function CustomCursor() {
     const smoothMouseX = useSpring(mouseX, smoothOptions);
     const smoothMouseY = useSpring(mouseY, smoothOptions);
 
+    const [isHovering, setIsHovering] = useState(false);
+
     useEffect(() => {
-        // Only show on desktop
         if (window.matchMedia("(max-width: 768px)").matches) return;
 
         setIsVisible(true);
@@ -22,6 +23,13 @@ export default function CustomCursor() {
         const manageMouseMove = (e: MouseEvent) => {
             mouseX.set(e.clientX);
             mouseY.set(e.clientY);
+
+            const target = e.target as HTMLElement;
+            if (target.closest('a') || target.closest('button')) {
+                setIsHovering(true);
+            } else {
+                setIsHovering(false);
+            }
         };
 
         window.addEventListener("mousemove", manageMouseMove);
@@ -35,9 +43,13 @@ export default function CustomCursor() {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 w-[600px] h-[600px] pointer-events-none z-40 hidden md:block mix-blend-screen"
+            className="fixed top-0 left-0 bg-white rounded-full pointer-events-none z-[150] hidden md:block mix-blend-difference"
+            animate={{
+                width: isHovering ? 64 : 16,
+                height: isHovering ? 64 : 16,
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
             style={{
-                background: "radial-gradient(circle, rgba(6,182,212,0.06) 0%, rgba(6,182,212,0) 60%)",
                 x: smoothMouseX,
                 y: smoothMouseY,
                 translateX: "-50%",

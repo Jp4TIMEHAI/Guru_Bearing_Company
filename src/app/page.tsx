@@ -6,6 +6,8 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from '../components/An
 import MouseParallax from '../components/MouseParallax';
 import MagneticHover from '../components/MagneticHover';
 import NumberCounter from '../components/NumberCounter';
+import TextReveal from '../components/TextReveal';
+import ScrollRevealImage from '../components/ScrollRevealImage';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -49,10 +51,10 @@ export default function Home() {
                 </div>
               </StaggerItem>
 
-              <StaggerItem direction="up">
+              <StaggerItem direction="none">
                 <h1 className="text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter text-white mb-6 leading-[0.95] uppercase">
-                  <span className="block text-neutral-100">Absolute</span>
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-red-500">Precision.</span>
+                  <TextReveal text="Absolute" className="block text-neutral-100" />
+                  <TextReveal text="Precision." className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-red-500" delay={0.2} />
                 </h1>
               </StaggerItem>
 
@@ -106,7 +108,8 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-black text-neutral-950 dark:text-white mb-8 tracking-tighter uppercase leading-tight">
-                Decades of Expertise in <br /><span className="text-accent">Motion Technology</span>
+                <TextReveal text="Decades of Expertise in" className="block" />
+                <TextReveal text="Motion Technology" className="block text-accent" delay={0.1} />
               </h2>
               <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-10 leading-relaxed">
                 At Guru Bearing Company, we understand that industrial downtime is not an option. We supply leading manufacturers and automotive companies with highly reliable bearing solutions that keep operations running flawlessly under the most demanding conditions.
@@ -135,10 +138,12 @@ export default function Home() {
 
             {/* Image/Stats Showcase */}
             <div className="relative">
-              <div className="aspect-[4/5] sm:aspect-square lg:aspect-[4/5] bg-neutral-100 dark:bg-neutral-900 relative flex items-center justify-center border border-neutral-200 dark:border-neutral-800 z-10 overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-90 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700 filter contrast-125"></div>
-                <div className="absolute inset-0 bg-neutral-900/40 pointer-events-none"></div>
-              </div>
+              <ScrollRevealImage 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop"
+                alt="Industrial Engineering"
+                containerClassName="aspect-[4/5] sm:aspect-square lg:aspect-[4/5] bg-neutral-100 dark:bg-neutral-900 relative flex items-center justify-center border border-neutral-200 dark:border-neutral-800 z-10 overflow-hidden"
+                className="opacity-90 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700 filter contrast-125"
+              />
 
               <AnimatedSection delay={0.3} direction="up" className="absolute -bottom-8 -left-6 sm:-left-10 bg-white dark:bg-neutral-950 p-8 shadow-2xl border border-neutral-200 dark:border-neutral-800 z-20 rounded-sm">
                 <div className="flex items-center gap-6">

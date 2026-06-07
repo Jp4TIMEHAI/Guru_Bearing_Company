@@ -1,5 +1,7 @@
 import { ShieldCheck, Target, Users } from "lucide-react";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
+import TextReveal from "@/components/TextReveal";
+import NumberCounter from "@/components/NumberCounter";
 
 export default function AboutPage() {
     return (
@@ -13,7 +15,9 @@ export default function AboutPage() {
             <section className="bg-gradient-to-r from-primary to-secondary text-white py-32 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.15] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at center, #ffffff 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
                 <AnimatedSection direction="down" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <h1 className="text-5xl md:text-7xl font-extrabold mb-8 drop-shadow-md tracking-tight">About Guru Bearing</h1>
+                    <h1 className="text-5xl md:text-7xl font-extrabold mb-8 drop-shadow-md tracking-tight uppercase">
+                        <TextReveal text="About Guru Bearing" />
+                    </h1>
                     <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed font-medium">
                         Leading the industry with precision engineering, unmatched reliability, and a commitment to powering global manufacturing since 1999.
                     </p>
@@ -25,7 +29,10 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                         <AnimatedSection direction="up">
-                            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-8 tracking-tight">Company <span className="text-accent dark:text-accent-dark">Overview</span></h2>
+                            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-8 tracking-tight uppercase">
+                                <TextReveal text="Company" className="mr-3" />
+                                <TextReveal text="Overview" className="text-accent dark:text-accent-dark" delay={0.1} />
+                            </h2>
                             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium mb-8">
                                 Located in New Delhi, India, Guru Bearing Company is a premier wholesaler, distributor, and retail business. Under the leadership of Manpreet Singh, we specialize in high-quality bearing solutions including Precision Universal Joints, Tapper Bearings, Pillow Block Bearings, and Industrial Roller Bearings.
                             </p>
@@ -43,7 +50,9 @@ export default function AboutPage() {
                             ].map((stat, i) => (
                                 <StaggerItem key={i} direction="up">
                                     <div className="bg-gray-50 dark:bg-gray-800/40 p-10 rounded-[2.5rem] text-center shadow-lg hover:shadow-2xl border border-gray-100 dark:border-gray-800/60 transform hover:-translate-y-2 transition-transform duration-500 backdrop-blur-md">
-                                        <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-accent to-accent-dark mb-4">{stat.num}</div>
+                                        <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-accent to-accent-dark mb-4">
+                                            <NumberCounter end={parseInt(stat.num)} suffix={stat.num.replace(/[0-9]/g, '')} />
+                                        </div>
                                         <div className="text-sm font-extrabold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-loose">{stat.label}</div>
                                     </div>
                                 </StaggerItem>
