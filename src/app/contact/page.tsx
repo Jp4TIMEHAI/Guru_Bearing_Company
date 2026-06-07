@@ -40,20 +40,21 @@ export default function ContactPage() {
         }
     };
 
-    const inputClasses = "w-full px-5 py-4 rounded-xl border-2 bg-transparent text-gray-900 dark:text-white outline-none transition-all duration-300 font-medium z-10 relative peer";
+    const inputClasses = "w-full px-5 py-4 rounded-sm border bg-transparent text-zinc-900 dark:text-white outline-none transition-all duration-300 font-medium z-10 relative peer";
 
     return (
-        <div className="bg-gray-50 dark:bg-[#0b1120] min-h-screen pt-32 pb-32 relative overflow-hidden">
-            {/* Background Orbs */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="bg-white dark:bg-zinc-950 min-h-screen pt-32 pb-32 relative overflow-hidden border-b border-zinc-200 dark:border-zinc-900">
+            {/* Technical background lines */}
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 1) 1px, transparent 1px)", backgroundSize: "128px 128px" }} />
+            <div className="dark:hidden absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(255, 255, 255, 1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 1) 1px, transparent 1px)", backgroundSize: "128px 128px" }} />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 <AnimatedSection direction="down" className="text-center mb-20 max-w-3xl mx-auto">
-                    <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight">Contact Us</h1>
-                    <p className="text-xl text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
-                        Our team is ready to assist you with sales inquiries, technical support, and partnership opportunities.
+                    <h1 className="text-5xl md:text-6xl font-black text-zinc-900 dark:text-white mb-6 tracking-tighter uppercase">Contact Us</h1>
+                    <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                    <p className="text-xl text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed">
+                        Our engineering team is ready to assist you with sales inquiries, technical support, and partnership opportunities.
                     </p>
                 </AnimatedSection>
 
@@ -62,18 +63,18 @@ export default function ContactPage() {
                     {/* Contact Details & Map */}
                     <div className="space-y-12">
                         <AnimatedSection direction="left">
-                            <div className="bg-white dark:bg-[#152033]/90 backdrop-blur-xl rounded-[2rem] p-10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-800">
-                                <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-10 tracking-tight">Corporate Headquarters</h2>
+                            <div className="bg-zinc-50 dark:bg-zinc-900 rounded-sm p-10 border border-zinc-200 dark:border-zinc-800">
+                                <h2 className="text-3xl font-black text-zinc-900 dark:text-white mb-10 tracking-tighter uppercase">Corporate Headquarters</h2>
 
                                 <StaggerContainer className="space-y-10" staggerChildren={0.1}>
                                     <StaggerItem direction="up">
                                         <div className="flex items-start group">
-                                            <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-2xl mr-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                                                <MapPin className="text-primary dark:text-blue-400 w-7 h-7" />
+                                            <div className="bg-white dark:bg-zinc-950 p-4 border border-zinc-200 dark:border-zinc-800 rounded-sm mr-6 group-hover:border-accent transition-all duration-300">
+                                                <MapPin className="text-accent w-7 h-7" />
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-gray-900 dark:text-white mb-2 text-lg">Address</h3>
-                                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium hover:text-gray-900 dark:hover:text-gray-300 transition-colors">
+                                                <h3 className="font-bold text-zinc-900 dark:text-white mb-2 text-lg uppercase tracking-wide">Address</h3>
+                                                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
                                                     No. 2800 C, Ashok Gali<br />Mori Gate, New Delhi-110006<br />Delhi, India
                                                 </p>
                                             </div>
@@ -82,13 +83,13 @@ export default function ContactPage() {
 
                                     <StaggerItem direction="up">
                                         <div className="flex items-start group">
-                                            <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-2xl mr-6 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300">
-                                                <Phone className="text-primary dark:text-blue-400 w-7 h-7" />
+                                            <div className="bg-white dark:bg-zinc-950 p-4 border border-zinc-200 dark:border-zinc-800 rounded-sm mr-6 group-hover:border-accent transition-all duration-300">
+                                                <Phone className="text-accent w-7 h-7" />
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-gray-900 dark:text-white mb-2 text-lg">Phone</h3>
-                                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
-                                                    <span className="text-gray-900 dark:text-gray-300 font-semibold">Manpreet Singh</span><br />
+                                                <h3 className="font-bold text-zinc-900 dark:text-white mb-2 text-lg uppercase tracking-wide">Phone</h3>
+                                                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
+                                                    <span className="text-zinc-900 dark:text-zinc-300 font-semibold">Manpreet Singh</span><br />
                                                     +91 98183 94355, +91 92123 10957<br />
                                                     Mon-Sat, 10 AM - 7 PM
                                                 </p>
@@ -98,13 +99,13 @@ export default function ContactPage() {
 
                                     <StaggerItem direction="up">
                                         <div className="flex items-start group">
-                                            <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-2xl mr-6 group-hover:scale-110 transition-all duration-300">
-                                                <Mail className="text-primary dark:text-blue-400 w-7 h-7" />
+                                            <div className="bg-white dark:bg-zinc-950 p-4 border border-zinc-200 dark:border-zinc-800 rounded-sm mr-6 group-hover:border-accent transition-all duration-300">
+                                                <Mail className="text-accent w-7 h-7" />
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-gray-900 dark:text-white mb-2 text-lg">Email</h3>
-                                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
-                                                    <a href="mailto:gurubearingcompany@gmail.com" className="hover:text-primary transition-colors">gurubearingcompany@gmail.com</a>
+                                                <h3 className="font-bold text-zinc-900 dark:text-white mb-2 text-lg uppercase tracking-wide">Email</h3>
+                                                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
+                                                    <a href="mailto:gurubearingcompany@gmail.com" className="hover:text-accent transition-colors">gurubearingcompany@gmail.com</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -115,43 +116,43 @@ export default function ContactPage() {
 
                         {/* Contact Map */}
                         <AnimatedSection direction="up" delay={0.2}>
-                            <div className="bg-gray-200 dark:bg-[#1a263d] rounded-[2rem] overflow-hidden relative shadow-2xl h-[350px] border border-gray-200 dark:border-gray-800 flex items-center justify-center group transform hover:scale-[1.02] transition-transform duration-500">
+                            <div className="bg-zinc-200 dark:bg-zinc-900 rounded-sm overflow-hidden relative h-[350px] border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
                                 <iframe 
                                     src="https://maps.google.com/maps?q=No.%202800%20C,%20Ashok%20Gali,%20Mori%20Gate,%20New%20Delhi-110006,%20Delhi,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                                    className="w-full h-full grayscale-[10%] contrast-[1.1] dark:invert dark:grayscale-[50%] dark:opacity-80 dark:hue-rotate-180 transition-all duration-700" 
+                                    className="w-full h-full grayscale-[100%] contrast-[1.2] dark:invert dark:grayscale-[100%] dark:opacity-70 transition-all duration-700" 
                                     style={{ border: 0 }} 
                                     allowFullScreen={false} 
                                     loading="lazy" 
                                     referrerPolicy="no-referrer-when-downgrade"
                                     title="Google Map Location"
                                 ></iframe>
-                                <div className="absolute inset-0 pointer-events-none border border-black/5 dark:border-white/5 rounded-[2rem]"></div>
+                                <div className="absolute inset-0 pointer-events-none border border-black/5 dark:border-white/5 rounded-sm"></div>
                             </div>
                         </AnimatedSection>
                     </div>
 
                     {/* Contact Form */}
                     <AnimatedSection direction="right" delay={0.1}>
-                        <div className="bg-white dark:bg-[#152033]/90 backdrop-blur-xl rounded-[2rem] p-10 md:p-14 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-800 h-full relative overflow-hidden">
+                        <div className="bg-white dark:bg-zinc-950 rounded-sm p-10 md:p-14 border border-zinc-200 dark:border-zinc-800 h-full relative">
 
-                            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-2 tracking-tight">Send a Message</h2>
-                            <p className="text-gray-600 dark:text-gray-400 mb-10 font-medium text-lg">We usually respond within 24 hours.</p>
+                            <h2 className="text-3xl font-black text-zinc-900 dark:text-white mb-2 tracking-tighter uppercase">Send a Message</h2>
+                            <p className="text-zinc-500 mb-10 font-medium">We usually respond within 24 hours.</p>
 
                             <AnimatePresence mode="wait">
                                 {status === "success" ? (
-                                    <motion.div
+                                        <motion.div
                                         key="success"
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         exit={{ opacity: 0, scale: 0.9 }}
-                                        className="p-10 bg-green-50 dark:bg-green-900/10 rounded-3xl text-center border border-green-200 dark:border-green-800/30 mt-8"
+                                        className="p-10 bg-green-50 dark:bg-green-900/10 rounded-sm text-center border border-green-200 dark:border-green-800/30 mt-8"
                                     >
-                                        <div className="w-20 h-20 bg-green-100 dark:bg-green-900/40 rounded-full flex items-center justify-center mx-auto mb-6">
-                                            <CheckCircle2 className="w-10 h-10 text-green-600 dark:text-green-400" />
+                                        <div className="w-16 h-16 bg-green-100 dark:bg-green-900/40 rounded-sm flex items-center justify-center mx-auto mb-6">
+                                            <CheckCircle2 className="w-8 h-8 text-green-600 dark:text-green-400" />
                                         </div>
-                                        <h3 className="text-2xl font-bold text-green-800 dark:text-green-300 mb-4">Message Sent Successfully!</h3>
-                                        <p className="text-green-700 dark:text-green-400/80 font-medium mb-8">Thank you for reaching out. A representative will get back to you shortly.</p>
-                                        <button onClick={() => setStatus("idle")} className="text-green-800 dark:text-green-300 font-bold hover:underline transition-colors uppercase tracking-widest text-sm flex items-center justify-center mx-auto group">
+                                        <h3 className="text-2xl font-bold text-green-800 dark:text-green-300 mb-4 uppercase tracking-wide">Message Sent!</h3>
+                                        <p className="text-green-700 dark:text-green-400/80 font-medium mb-8 text-sm">Thank you for reaching out. A representative will get back to you shortly.</p>
+                                        <button onClick={() => setStatus("idle")} className="text-green-800 dark:text-green-300 font-bold hover:underline transition-colors uppercase tracking-widest text-xs flex items-center justify-center mx-auto group">
                                             Send another message
                                             <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </button>
@@ -223,9 +224,8 @@ export default function ContactPage() {
                                             whileTap={{ scale: 0.98 }}
                                             disabled={status === "submitting"}
                                             type="submit"
-                                            className="w-full bg-accent hover:bg-accent-dark text-white font-extrabold text-lg py-5 rounded-xl shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed uppercase tracking-widest relative overflow-hidden group"
+                                            className="w-full bg-accent hover:bg-accent-dark text-white font-bold text-sm py-5 rounded-sm transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed uppercase tracking-widest"
                                         >
-                                            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
                                             {status === "submitting" ? (
                                                 <span className="animate-pulse relative z-10 flex items-center">
                                                     <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
@@ -236,7 +236,7 @@ export default function ContactPage() {
                                                 </span>
                                             ) : (
                                                 <div className="relative z-10 flex items-center justify-center">
-                                                    Send Message <Send className="ml-3 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                                    Send Message <Send className="ml-3 w-4 h-4" />
                                                 </div>
                                             )}
                                         </motion.button>

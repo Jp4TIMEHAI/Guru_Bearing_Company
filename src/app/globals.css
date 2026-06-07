@@ -1,38 +1,42 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #0F172A;
-  --color-primary-dark: #0B1120;
-  --color-secondary: #1E3A8A;
-  --color-secondary-dark: #172B6A;
-  --color-accent: #06B6D4;
-  --color-accent-dark: #0891B2;
-  --color-gold: #F4A300;
-  --color-emerald: #1F7A63;
-  --color-steel: #728292;
-  --color-steel-light: #F1F5F9;
-  --color-steel-dark: #1F2937;
+  --color-primary: #09090b; /* Zinc 950 */
+  --color-primary-dark: #000000;
+  --color-secondary: #18181b; /* Zinc 900 */
+  --color-secondary-dark: #09090b;
+  --color-accent: #2563eb; /* Blue 600 */
+  --color-accent-dark: #1d4ed8;
+  --color-gold: #f59e0b;
+  --color-emerald: #059669;
+  --color-steel: #71717a;
+  --color-steel-light: #f4f4f5;
+  --color-steel-dark: #27272a;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 }
 
 :root {
-  --background: #fdfdfd;
-  --foreground: #1e293b;
+  --background: #ffffff;
+  --foreground: #09090b;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b1120;
-    --foreground: #f8fafc;
+    --background: #09090b;
+    --foreground: #fafafa;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), var(--font-geist-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-plus-jakarta), var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
 ::selection {
@@ -40,12 +44,21 @@ body {
   color: white;
 }
 
-/* Base custom styles to add modern smooth feel */
+/* Sharp industrial borders */
 @layer utilities {
-  .glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  .industrial-border {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .dark .industrial-border {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .industrial-panel {
+    background: #ffffff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+  }
+  .dark .industrial-panel {
+    background: #121214;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
   }
 }

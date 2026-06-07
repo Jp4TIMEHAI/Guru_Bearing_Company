@@ -45,7 +45,7 @@ export default function Navigation() {
                             <motion.div
                                 whileHover={{ rotate: 180 }}
                                 transition={{ duration: 0.5 }}
-                                className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center shadow-md shadow-accent/20"
+                                className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center"
                             >
                                 <Settings className="text-white w-6 h-6" />
                             </motion.div>
@@ -87,7 +87,7 @@ export default function Navigation() {
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-lg font-semibold transition-all shadow-md hover:shadow-xl hover:shadow-accent/30 text-sm"
+                                    className="bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-sm font-bold uppercase tracking-widest transition-all text-xs"
                                 >
                                     Get a Quote
                                 </motion.button>
@@ -148,7 +148,7 @@ export default function Navigation() {
                                 <Link
                                     href="/quote"
                                     onClick={() => setIsOpen(false)}
-                                    className="mt-6 block w-full text-center bg-accent hover:bg-accent-dark text-white px-4 py-4 rounded-lg font-bold shadow-lg transition-colors"
+                                    className="mt-6 block w-full text-center bg-accent hover:bg-accent-dark text-white px-4 py-4 rounded-sm font-bold uppercase tracking-widest transition-colors text-sm"
                                 >
                                     Get a Quote
                                 </Link>
