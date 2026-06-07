@@ -41,18 +41,20 @@ export default function Navigation() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center transition-all duration-300">
                     <div className="flex-shrink-0 flex items-center gap-3">
-                        <Link href="/" className="flex items-center gap-3 group">
-                            <motion.div
-                                whileHover={{ rotate: 180 }}
-                                transition={{ duration: 0.5 }}
-                                className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center"
-                            >
-                                <Settings className="text-white w-6 h-6" />
-                            </motion.div>
-                            <span className="font-bold text-xl tracking-tight text-white group-hover:text-accent transition-colors duration-300">
-                                GURU BEARING
-                            </span>
-                        </Link>
+                        <MagneticHover strength={0.1}>
+                            <Link href="/" className="flex items-center gap-3 group">
+                                <motion.div
+                                    whileHover={{ rotate: 180 }}
+                                    transition={{ duration: 0.5 }}
+                                    className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center"
+                                >
+                                    <Settings className="text-white w-6 h-6" />
+                                </motion.div>
+                                <span className="font-bold text-xl tracking-tight text-white group-hover:text-accent transition-colors duration-300">
+                                    GURU BEARING
+                                </span>
+                            </Link>
+                        </MagneticHover>
                     </div>
 
                     {/* Desktop Menu */}
@@ -60,10 +62,10 @@ export default function Navigation() {
                         {links.map((link) => {
                             const isActive = pathname === link.href;
                             return (
+                            <MagneticHover key={link.href} strength={0.1}>
                                 <Link
-                                    key={link.href}
                                     href={link.href}
-                                    className={`relative text-sm font-semibold transition-colors group py-2 ${isActive ? "text-accent" : "text-gray-300 hover:text-white"
+                                    className={`relative text-sm font-semibold transition-colors group py-2 px-1 ${isActive ? "text-accent" : "text-gray-300 hover:text-white"
                                         }`}
                                 >
                                     {link.label}
@@ -77,6 +79,7 @@ export default function Navigation() {
                                         <span className="absolute left-0 bottom-0 w-full h-[3px] bg-accent rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
                                     )}
                                 </Link>
+                            </MagneticHover>
                             );
                         })}
                     </div>
@@ -87,7 +90,7 @@ export default function Navigation() {
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-sm font-bold uppercase tracking-widest transition-all text-xs"
+                                    className="btn-sweep bg-transparent text-white px-6 py-2.5 rounded-sm font-bold uppercase tracking-widest transition-all text-xs"
                                 >
                                     Get a Quote
                                 </motion.button>
@@ -148,7 +151,7 @@ export default function Navigation() {
                                 <Link
                                     href="/quote"
                                     onClick={() => setIsOpen(false)}
-                                    className="mt-6 block w-full text-center bg-accent hover:bg-accent-dark text-white px-4 py-4 rounded-sm font-bold uppercase tracking-widest transition-colors text-sm"
+                                    className="mt-6 block w-full text-center btn-sweep bg-transparent text-white px-4 py-4 rounded-sm font-bold uppercase tracking-widest transition-colors text-sm"
                                 >
                                     Get a Quote
                                 </Link>

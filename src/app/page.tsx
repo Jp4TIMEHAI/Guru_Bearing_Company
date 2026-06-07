@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle2, Factory, Truck, Wrench, ShieldCheck, ChevronR
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../components/AnimatedSection';
 import MouseParallax from '../components/MouseParallax';
 import MagneticHover from '../components/MagneticHover';
+import NumberCounter from '../components/NumberCounter';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -65,7 +66,7 @@ export default function Home() {
               <StaggerItem direction="up">
                 <div className="flex flex-col sm:flex-row gap-4">
                   <MagneticHover strength={0.2}>
-                    <Link href="/quote" className="inline-flex items-center justify-center px-8 py-5 text-sm font-bold uppercase tracking-widest text-white bg-accent hover:bg-accent-dark transition-all rounded-sm">
+                    <Link href="/quote" className="inline-flex items-center justify-center px-8 py-5 text-sm font-bold uppercase tracking-widest text-white btn-sweep bg-transparent transition-all rounded-sm">
                       Request a Quote
                       <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -80,15 +81,17 @@ export default function Home() {
             </div>
 
             <StaggerItem direction="left" className="hidden lg:block relative">
-              <div className="relative w-full aspect-square">
-                <motion.img 
-                  animate={{ y: [0, -20, 0] }}
-                  transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-                  src="/images/hero-bearing.png" 
-                  alt="Precision Industrial Bearing" 
-                  className="w-full h-full object-contain drop-shadow-[0_0_80px_rgba(153,27,27,0.3)] scale-[1.2]" 
-                />
-              </div>
+              <MouseParallax factor={0.04}>
+                <div className="relative w-full aspect-square">
+                  <motion.img 
+                    animate={{ y: [0, -20, 0] }}
+                    transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                    src="/images/hero-bearing.png" 
+                    alt="Precision Industrial Bearing" 
+                    className="w-full h-full object-contain drop-shadow-[0_0_80px_rgba(153,27,27,0.3)] scale-[1.2]" 
+                  />
+                </div>
+              </MouseParallax>
             </StaggerItem>
           </div>
         </StaggerContainer>
@@ -137,7 +140,7 @@ export default function Home() {
               <AnimatedSection delay={0.3} direction="up" className="absolute -bottom-8 -left-6 sm:-left-10 bg-white dark:bg-neutral-950 p-8 shadow-2xl border border-neutral-200 dark:border-neutral-800 z-20 rounded-sm">
                 <div className="flex items-center gap-6">
                   <div className="w-16 h-16 bg-accent text-white flex items-center justify-center rounded-sm">
-                    <span className="text-2xl font-black">25+</span>
+                    <span className="text-2xl font-black"><NumberCounter end={25} suffix="+" /></span>
                   </div>
                   <div>
                     <p className="font-black text-neutral-950 dark:text-white uppercase tracking-widest text-sm mb-1">Years</p>

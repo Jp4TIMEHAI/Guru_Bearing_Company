@@ -7,6 +7,7 @@ import Chatbot from "@/components/Chatbot";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import PageTransition from "@/components/PageTransition";
+import Preloader from "@/components/Preloader";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,6 +35,7 @@ export default function RootLayout({
         className={`${inter.variable} ${plusJakarta.variable} antialiased min-h-screen flex flex-col pt-16`}
       >
         <SmoothScroll>
+          <Preloader />
           <CustomCursor />
           <Navigation />
           <PageTransition>

@@ -132,7 +132,7 @@ export default function ProductsPage() {
                                         <MagneticHover strength={0.3}>
                                             <Link
                                                 href={`/quote?product=${encodeURIComponent(product.name)}`}
-                                                className="inline-flex items-center px-10 py-5 bg-accent hover:bg-accent-dark text-white rounded-2xl font-extrabold shadow-xl hover:shadow-2xl hover:shadow-accent/30 transition-all hover:-translate-y-1 group text-sm uppercase tracking-widest relative overflow-hidden"
+                                                className="inline-flex items-center px-10 py-5 btn-sweep bg-transparent text-white rounded-2xl font-extrabold shadow-xl hover:shadow-2xl hover:shadow-accent/30 transition-all hover:-translate-y-1 group text-sm uppercase tracking-widest relative overflow-hidden"
                                             >
                                                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
                                                 <span className="relative z-10 flex items-center">

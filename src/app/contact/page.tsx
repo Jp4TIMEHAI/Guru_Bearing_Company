@@ -224,7 +224,7 @@ export default function ContactPage() {
                                             whileTap={{ scale: 0.98 }}
                                             disabled={status === "submitting"}
                                             type="submit"
-                                            className="w-full bg-accent hover:bg-accent-dark text-white font-bold text-sm py-5 rounded-sm transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed uppercase tracking-widest"
+                                            className="w-full btn-sweep bg-transparent text-white font-bold text-sm py-5 rounded-sm transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed uppercase tracking-widest"
                                         >
                                             {status === "submitting" ? (
                                                 <span className="animate-pulse relative z-10 flex items-center">

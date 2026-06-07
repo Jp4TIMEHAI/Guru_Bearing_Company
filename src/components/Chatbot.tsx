@@ -151,7 +151,7 @@ export default function Chatbot() {
                                     whileTap={input.trim() ? { scale: 0.95 } : {}}
                                     type="submit"
                                     disabled={isLoading || !input.trim()}
-                                    className="bg-accent hover:bg-accent-dark text-white p-3.5 rounded-2xl shadow-md shadow-accent/20 transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center flex-shrink-0 group"
+                                    className="btn-sweep bg-transparent text-white p-3.5 rounded-2xl shadow-md shadow-accent/20 transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center flex-shrink-0 group"
                                 >
                                     <Send className={`w-5 h-5 ml-0.5 ${input.trim() ? 'group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform' : ''}`} />
                                 </motion.button>
