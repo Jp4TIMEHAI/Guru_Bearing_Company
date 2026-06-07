@@ -6,23 +6,11 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from '../components/An
 import MouseParallax from '../components/MouseParallax';
 import MagneticHover from '../components/MagneticHover';
 import NumberCounter from '../components/NumberCounter';
+import TextReveal from '../components/TextReveal';
 import ScrollRevealImage from '../components/ScrollRevealImage';
-import InfiniteMarquee from '../components/InfiniteMarquee';
-import GlareCard from '../components/GlareCard';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Home() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"]
-  });
-  
-  // Hero text scales massively on scroll
-  const heroTextScale = useTransform(scrollYProgress, [0, 1], [1, 20]);
-  const heroTextOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-
   const products = [
     { title: "Precision Universal Joints", desc: "Engineered for high torque and minimal backlash in demanding environments.", icon: <Settings className="w-10 h-10" />, link: "/products#universal-joints" },
     { title: "Tapper Bearings", desc: "Exceptional radial and axial load capacity for heavy-duty applications.", icon: <Cog className="w-10 h-10" />, link: "/products#tapper" },
@@ -40,7 +28,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-[92vh] flex items-center bg-primary overflow-hidden pt-20">
+      <section className="relative min-h-[92vh] flex items-center bg-primary overflow-hidden pt-20">
         {/* Deep Carbon Background with subtle noise/texture */}
         <div className="absolute inset-0 bg-[#09090b]" />
         
@@ -64,13 +52,10 @@ export default function Home() {
               </StaggerItem>
 
               <StaggerItem direction="none">
-                <motion.h1 
-                  style={{ scale: heroTextScale, opacity: heroTextOpacity, transformOrigin: "left center" }}
-                  className="text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter text-white mb-6 leading-[0.95] uppercase"
-                >
+                <h1 className="text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter text-white mb-6 leading-[0.95] uppercase">
                   <TextReveal text="Absolute" className="block text-neutral-100" />
                   <TextReveal text="Precision." className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-red-500" delay={0.2} />
-                </motion.h1>
+                </h1>
               </StaggerItem>
 
               <StaggerItem direction="up">
@@ -176,15 +161,6 @@ export default function Home() {
         </AnimatedSection>
       </section>
 
-      {/* Infinite Kinetic Marquee */}
-      <div className="py-6 sm:py-10 bg-accent border-y border-neutral-950 overflow-hidden shadow-2xl z-20 relative">
-        <InfiniteMarquee 
-          text="GURU BEARING CO. • ABSOLUTE PRECISION • BUILT FOR EXTREME ENDURANCE • " 
-          className="text-4xl sm:text-6xl md:text-8xl font-black text-white/90 uppercase tracking-tighter mix-blend-overlay"
-          baseVelocity={-1.5}
-        />
-      </div>
-
       {/* Product Categories */}
       <section className="py-32 bg-neutral-50 dark:bg-[#0c0c0e] relative border-b border-neutral-200 dark:border-neutral-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -197,19 +173,19 @@ export default function Home() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product, idx) => (
               <StaggerItem key={idx} direction="up">
-                <GlareCard className="h-full bg-white dark:bg-neutral-950 p-8 border border-neutral-200 dark:border-neutral-800">
-                  <div className="text-neutral-300 dark:text-neutral-700 mb-8 transform group-hover:text-accent transition-colors duration-300 relative z-10">
+                <div className="group h-full bg-white dark:bg-neutral-950 p-8 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-300 border border-neutral-200 dark:border-neutral-800 relative rounded-sm">
+                  <div className="text-neutral-300 dark:text-neutral-700 mb-8 transform group-hover:text-accent transition-colors duration-300">
                     {product.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-neutral-950 dark:text-white mb-4 uppercase tracking-wide relative z-10">{product.title}</h3>
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-12 leading-relaxed text-sm relative z-10">{product.desc}</p>
+                  <h3 className="text-xl font-bold text-neutral-950 dark:text-white mb-4 uppercase tracking-wide">{product.title}</h3>
+                  <p className="text-neutral-600 dark:text-neutral-400 mb-12 leading-relaxed text-sm">{product.desc}</p>
 
-                  <div className="absolute bottom-8 left-8 z-10">
+                  <div className="absolute bottom-8 left-8">
                     <Link href={product.link} className="inline-flex items-center text-xs font-bold text-accent group/link uppercase tracking-widest">
                       Specifications <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-2 transition-transform" />
                     </Link>
                   </div>
-                </GlareCard>
+                </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
