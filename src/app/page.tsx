@@ -82,13 +82,16 @@ export default function Home() {
 
             <StaggerItem direction="left" className="hidden lg:block relative">
               <MouseParallax factor={0.04}>
-                <div className="relative w-full aspect-square">
+                <div 
+                  className="relative w-full aspect-square" 
+                  style={{ maskImage: 'radial-gradient(circle, black 50%, transparent 75%)', WebkitMaskImage: 'radial-gradient(circle, black 50%, transparent 75%)' }}
+                >
                   <motion.img 
                     animate={{ y: [0, -20, 0] }}
                     transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                     src="/images/hero-bearing.png" 
                     alt="Precision Industrial Bearing" 
-                    className="w-full h-full object-contain drop-shadow-[0_0_80px_rgba(153,27,27,0.3)] scale-[1.2]" 
+                    className="w-full h-full object-contain mix-blend-screen opacity-90" 
                   />
                 </div>
               </MouseParallax>
