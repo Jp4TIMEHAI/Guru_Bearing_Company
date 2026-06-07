@@ -16,6 +16,7 @@ export default function QuotePage() {
     });
 
     const [status, setStatus] = useState("idle");
+    const [errorMsg, setErrorMsg] = useState("");
     const [focused, setFocused] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -32,9 +33,12 @@ export default function QuotePage() {
             if (res.ok) {
                 setStatus("success");
             } else {
+                const data = await res.json();
+                setErrorMsg(data.error?.message || data.message || "An error occurred");
                 setStatus("error");
             }
-        } catch {
+        } catch (err: any) {
+            setErrorMsg(err.message || "An error occurred");
             setStatus("error");
         }
     };
@@ -195,7 +199,7 @@ export default function QuotePage() {
                                     exit={{ opacity: 0, height: 0 }}
                                     className="mb-8 p-5 bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 rounded-xl text-sm font-bold border border-red-100 dark:border-red-800"
                                 >
-                                    An error occurred while submitting your request. Please try again.
+                                    {errorMsg || "An error occurred while submitting your request. Please try again."}
                                 </motion.div>
                             )}
                         </AnimatePresence>

@@ -42,7 +42,7 @@ export async function POST(req: Request) {
         if (emailResult.success) {
             return NextResponse.json({ success: true, message: "Quote request logged successfully." }, { status: 200 });
         } else {
-            return NextResponse.json({ success: false, message: "Error sending email request." }, { status: 500 });
+            return NextResponse.json({ success: false, message: "Error sending email request.", error: emailResult.error }, { status: 500 });
         }
     } catch (error) {
         console.error("Error processing quote request:", error);

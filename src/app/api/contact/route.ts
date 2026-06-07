@@ -33,7 +33,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ success: true, message: 'Message sent successfully' });
         } else {
             return NextResponse.json(
-                { error: 'Failed to send message' },
+                { error: 'Failed to send message', details: emailResult.error },
                 { status: 500 }
             );
         }
