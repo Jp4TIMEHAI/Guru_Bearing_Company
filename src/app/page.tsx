@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, Factory, Truck, Wrench, ShieldCheck, ChevronRight, Settings, Cog, Target, Zap } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../components/AnimatedSection';
