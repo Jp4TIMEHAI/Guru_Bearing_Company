@@ -5,7 +5,8 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Replace this with your actual receiving email address
-const TO_EMAIL = 'gurubearingcompany@gmail.com'; 
+// Important: When using Resend's free tier, this MUST be the email address you signed up with!
+const TO_EMAIL = process.env.RECEIVER_EMAIL || 'gurubearingcompany@gmail.com'; 
 
 export async function sendContactEmail(data: { fname: string; lname: string; email: string; phone?: string; msg: string }) {
     try {
