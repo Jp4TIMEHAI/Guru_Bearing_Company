@@ -40,19 +40,19 @@ export default function Home() {
             <StaggerItem direction="up">
               <div className="inline-flex items-center gap-3 px-4 py-1.5 border border-white/10 bg-white/5 mb-8 rounded-sm">
                 <span className="flex h-2 w-2 bg-accent animate-pulse"></span>
-                <span className="text-xs font-bold tracking-widest text-zinc-300 uppercase">ISO 9001 Certified Bearings</span>
+                <span className="text-xs font-bold tracking-widest text-neutral-300 uppercase">ISO 9001 Certified Bearings</span>
               </div>
             </StaggerItem>
 
             <StaggerItem direction="up">
               <h1 className="text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter text-white mb-6 leading-[0.95] uppercase">
-                <span className="block text-zinc-100">Absolute</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">Precision.</span>
+                <span className="block text-neutral-100">Absolute</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-red-500">Precision.</span>
               </h1>
             </StaggerItem>
 
             <StaggerItem direction="up">
-              <p className="text-xl md:text-2xl text-zinc-400 mb-12 max-w-2xl leading-relaxed font-medium">
+              <p className="text-xl md:text-2xl text-neutral-400 mb-12 max-w-2xl leading-relaxed font-medium">
                 Guru Bearing Company engineers and supplies high-performance industrial components. 
                 Built for extreme endurance. Designed for zero downtime.
               </p>
@@ -67,7 +67,7 @@ export default function Home() {
                   </Link>
                 </MagneticHover>
                 <MagneticHover strength={0.2}>
-                  <Link href="/products" className="inline-flex items-center justify-center px-8 py-5 text-sm font-bold uppercase tracking-widest text-zinc-100 bg-white/5 border border-white/10 hover:bg-white/10 transition-all rounded-sm">
+                  <Link href="/products" className="inline-flex items-center justify-center px-8 py-5 text-sm font-bold uppercase tracking-widest text-neutral-100 bg-white/5 border border-white/10 hover:bg-white/10 transition-all rounded-sm">
                     View Specifications
                   </Link>
                 </MagneticHover>
@@ -78,14 +78,14 @@ export default function Home() {
       </section>
 
       {/* Intro Section */}
-      <section className="py-32 bg-white dark:bg-[#09090b] relative border-b border-zinc-200 dark:border-zinc-900">
+      <section className="py-32 bg-white dark:bg-[#09090b] relative border-b border-neutral-200 dark:border-neutral-900">
         <AnimatedSection direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-black text-zinc-950 dark:text-white mb-8 tracking-tighter uppercase leading-tight">
+              <h2 className="text-4xl md:text-5xl font-black text-neutral-950 dark:text-white mb-8 tracking-tighter uppercase leading-tight">
                 Decades of Expertise in <br /><span className="text-accent">Motion Technology</span>
               </h2>
-              <p className="text-lg text-zinc-600 dark:text-zinc-400 mb-10 leading-relaxed">
+              <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-10 leading-relaxed">
                 At Guru Bearing Company, we understand that industrial downtime is not an option. We supply leading manufacturers and automotive companies with highly reliable bearing solutions that keep operations running flawlessly under the most demanding conditions.
               </p>
 
@@ -97,7 +97,7 @@ export default function Home() {
                   "Expert Technical Engineering Support"
                 ].map((item, i) => (
                   <StaggerItem key={i} direction="left">
-                    <div className="flex items-center text-zinc-800 dark:text-zinc-200 font-bold bg-zinc-50 dark:bg-zinc-900 p-4 rounded-sm border border-zinc-200 dark:border-zinc-800">
+                    <div className="flex items-center text-neutral-800 dark:text-neutral-200 font-bold bg-neutral-50 dark:bg-neutral-900 p-4 rounded-sm border border-neutral-200 dark:border-neutral-800">
                       <ShieldCheck className="w-5 h-5 text-accent mr-4 flex-shrink-0" />
                       {item}
                     </div>
@@ -112,19 +112,19 @@ export default function Home() {
 
             {/* Image/Stats Showcase */}
             <div className="relative">
-              <div className="aspect-[4/5] sm:aspect-square lg:aspect-[4/5] bg-zinc-100 dark:bg-zinc-900 relative flex items-center justify-center border border-zinc-200 dark:border-zinc-800 z-10 overflow-hidden">
+              <div className="aspect-[4/5] sm:aspect-square lg:aspect-[4/5] bg-neutral-100 dark:bg-neutral-900 relative flex items-center justify-center border border-neutral-200 dark:border-neutral-800 z-10 overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-90 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700 filter contrast-125"></div>
-                <div className="absolute inset-0 bg-zinc-900/40 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-neutral-900/40 pointer-events-none"></div>
               </div>
 
-              <AnimatedSection delay={0.3} direction="up" className="absolute -bottom-8 -left-6 sm:-left-10 bg-white dark:bg-zinc-950 p-8 shadow-2xl border border-zinc-200 dark:border-zinc-800 z-20 rounded-sm">
+              <AnimatedSection delay={0.3} direction="up" className="absolute -bottom-8 -left-6 sm:-left-10 bg-white dark:bg-neutral-950 p-8 shadow-2xl border border-neutral-200 dark:border-neutral-800 z-20 rounded-sm">
                 <div className="flex items-center gap-6">
                   <div className="w-16 h-16 bg-accent text-white flex items-center justify-center rounded-sm">
                     <span className="text-2xl font-black">25+</span>
                   </div>
                   <div>
-                    <p className="font-black text-zinc-950 dark:text-white uppercase tracking-widest text-sm mb-1">Years</p>
-                    <p className="font-medium text-zinc-500 dark:text-zinc-400 text-sm">Industry Leadership</p>
+                    <p className="font-black text-neutral-950 dark:text-white uppercase tracking-widest text-sm mb-1">Years</p>
+                    <p className="font-medium text-neutral-500 dark:text-neutral-400 text-sm">Industry Leadership</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -134,23 +134,23 @@ export default function Home() {
       </section>
 
       {/* Product Categories */}
-      <section className="py-32 bg-zinc-50 dark:bg-[#0c0c0e] relative border-b border-zinc-200 dark:border-zinc-900">
+      <section className="py-32 bg-neutral-50 dark:bg-[#0c0c0e] relative border-b border-neutral-200 dark:border-neutral-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection direction="down" className="mb-20">
-            <h2 className="text-4xl md:text-5xl font-black text-zinc-950 dark:text-white mb-6 tracking-tighter uppercase">Product Categories</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-neutral-950 dark:text-white mb-6 tracking-tighter uppercase">Product Categories</h2>
             <div className="w-24 h-1 bg-accent mb-6"></div>
-            <p className="text-xl text-zinc-600 dark:text-zinc-400 font-medium max-w-2xl">Comprehensive bearing supply for demanding industrial applications. Built to exact specifications.</p>
+            <p className="text-xl text-neutral-600 dark:text-neutral-400 font-medium max-w-2xl">Comprehensive bearing supply for demanding industrial applications. Built to exact specifications.</p>
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product, idx) => (
               <StaggerItem key={idx} direction="up">
-                <div className="group h-full bg-white dark:bg-zinc-950 p-8 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors duration-300 border border-zinc-200 dark:border-zinc-800 relative rounded-sm">
-                  <div className="text-zinc-300 dark:text-zinc-700 mb-8 transform group-hover:text-accent transition-colors duration-300">
+                <div className="group h-full bg-white dark:bg-neutral-950 p-8 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-300 border border-neutral-200 dark:border-neutral-800 relative rounded-sm">
+                  <div className="text-neutral-300 dark:text-neutral-700 mb-8 transform group-hover:text-accent transition-colors duration-300">
                     {product.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-zinc-950 dark:text-white mb-4 uppercase tracking-wide">{product.title}</h3>
-                  <p className="text-zinc-600 dark:text-zinc-400 mb-12 leading-relaxed text-sm">{product.desc}</p>
+                  <h3 className="text-xl font-bold text-neutral-950 dark:text-white mb-4 uppercase tracking-wide">{product.title}</h3>
+                  <p className="text-neutral-600 dark:text-neutral-400 mb-12 leading-relaxed text-sm">{product.desc}</p>
 
                   <div className="absolute bottom-8 left-8">
                     <Link href={product.link} className="inline-flex items-center text-xs font-bold text-accent group/link uppercase tracking-widest">
@@ -165,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-32 bg-zinc-950 text-white overflow-hidden relative">
+      <section className="py-32 bg-neutral-950 text-white overflow-hidden relative">
         {/* Technical background lines */}
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(255, 255, 255, 1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 1) 1px, transparent 1px)", backgroundSize: "128px 128px" }} />
 
@@ -173,18 +173,18 @@ export default function Home() {
           <AnimatedSection direction="down" className="mb-20">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter uppercase">Why Guru Bearing?</h2>
             <div className="w-24 h-1 bg-accent mb-6"></div>
-            <p className="text-zinc-400 max-w-2xl text-lg">Partner with seasoned industry leaders for unmatched quality, precision engineering, and global reliability.</p>
+            <p className="text-neutral-400 max-w-2xl text-lg">Partner with seasoned industry leaders for unmatched quality, precision engineering, and global reliability.</p>
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16" staggerChildren={0.15}>
             {features.map((feat, idx) => (
               <StaggerItem key={idx} direction="up">
-                <div className="h-full group border-l-2 border-zinc-800 pl-6 hover:border-accent transition-colors">
+                <div className="h-full group border-l-2 border-neutral-800 pl-6 hover:border-accent transition-colors">
                   <div className="mb-6">
                     {feat.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 uppercase tracking-wide">{feat.title}</h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed">{feat.desc}</p>
+                  <p className="text-neutral-400 text-sm leading-relaxed">{feat.desc}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -200,7 +200,7 @@ export default function Home() {
             <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto font-medium">
               Consult with our engineering team to discuss your industrial bearing requirements and secure a comprehensive quotation.
             </p>
-            <Link href="/quote" className="inline-flex items-center justify-center px-10 py-5 text-sm font-bold uppercase tracking-widest text-accent bg-white hover:bg-zinc-100 transition-colors rounded-sm shadow-xl">
+            <Link href="/quote" className="inline-flex items-center justify-center px-10 py-5 text-sm font-bold uppercase tracking-widest text-accent bg-white hover:bg-neutral-100 transition-colors rounded-sm shadow-xl">
               Request a Formal Quote <ArrowRight className="ml-3 w-5 h-5" />
             </Link>
           </div>

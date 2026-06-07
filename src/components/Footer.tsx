@@ -17,7 +17,7 @@ export default function Footer() {
                                 GURU BEARING
                             </span>
                         </div>
-                        <p className="text-zinc-400 text-sm leading-relaxed max-w-sm font-medium">
+                        <p className="text-neutral-400 text-sm leading-relaxed max-w-sm font-medium">
                             Premium quality bearings for industrial, automotive, and heavy-duty
                             manufacturing applications. Reliable, durable, and engineered to perform.
                         </p>
@@ -28,22 +28,22 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
                         <ul className="space-y-4">
                             <li>
-                                <Link href="/products" className="text-zinc-400 hover:text-white transition-colors text-sm">
+                                <Link href="/products" className="text-neutral-400 hover:text-white transition-colors text-sm">
                                     Our Products
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about" className="text-zinc-400 hover:text-white transition-colors text-sm">
+                                <Link href="/about" className="text-neutral-400 hover:text-white transition-colors text-sm">
                                     About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/quote" className="text-zinc-400 hover:text-white transition-colors text-sm">
+                                <Link href="/quote" className="text-neutral-400 hover:text-white transition-colors text-sm">
                                     Request a Quote
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="text-zinc-400 hover:text-white transition-colors text-sm">
+                                <Link href="/contact" className="text-neutral-400 hover:text-white transition-colors text-sm">
                                     Contact Us
                                 </Link>
                             </li>
@@ -56,7 +56,7 @@ export default function Footer() {
                         <ul className="space-y-4 text-sm">
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                                <span className="text-zinc-400">
+                                <span className="text-neutral-400">
                                     No. 2800 C, Ashok Gali,<br />
                                     Mori Gate, New Delhi-110006,<br />
                                     Delhi, India
@@ -64,11 +64,11 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="w-5 h-5 text-accent flex-shrink-0" />
-                                <span className="text-zinc-400">+91 98183 94355, +91 92123 10957</span>
+                                <span className="text-neutral-400">+91 98183 94355, +91 92123 10957</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="w-5 h-5 text-accent flex-shrink-0" />
-                                <span className="text-zinc-400">gurubearingcompany@gmail.com</span>
+                                <span className="text-neutral-400">gurubearingcompany@gmail.com</span>
                             </li>
                         </ul>
                     </div>
@@ -76,7 +76,7 @@ export default function Footer() {
                     {/* Business Hours */}
                     <div>
                         <h3 className="text-lg font-semibold mb-6">Business Hours</h3>
-                        <ul className="space-y-4 text-sm text-zinc-400">
+                        <ul className="space-y-4 text-sm text-neutral-400">
                             <li className="flex items-center gap-3">
                                 <Clock className="w-5 h-5 text-accent flex-shrink-0" />
                                 <div>
@@ -97,12 +97,12 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-zinc-500 text-sm">
+                    <p className="text-neutral-500 text-sm">
                         &copy; {new Date().getFullYear()} Guru Bearing Company. All rights reserved.
                     </p>
                     <div className="flex gap-6">
-                        <span className="text-zinc-500 text-sm hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
-                        <span className="text-zinc-500 text-sm hover:text-white cursor-pointer transition-colors">Terms of Service</span>
+                        <span className="text-neutral-500 text-sm hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
+                        <span className="text-neutral-500 text-sm hover:text-white cursor-pointer transition-colors">Terms of Service</span>
                     </div>
                 </div>
             </div>

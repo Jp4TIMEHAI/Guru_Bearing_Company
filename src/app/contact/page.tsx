@@ -40,10 +40,10 @@ export default function ContactPage() {
         }
     };
 
-    const inputClasses = "w-full px-5 py-4 rounded-sm border bg-transparent text-zinc-900 dark:text-white outline-none transition-all duration-300 font-medium z-10 relative peer";
+    const inputClasses = "w-full px-5 py-4 rounded-sm border bg-transparent text-neutral-900 dark:text-white outline-none transition-all duration-300 font-medium z-10 relative peer";
 
     return (
-        <div className="bg-white dark:bg-zinc-950 min-h-screen pt-32 pb-32 relative overflow-hidden border-b border-zinc-200 dark:border-zinc-900">
+        <div className="bg-white dark:bg-neutral-950 min-h-screen pt-32 pb-32 relative overflow-hidden border-b border-neutral-200 dark:border-neutral-900">
             {/* Technical background lines */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 1) 1px, transparent 1px)", backgroundSize: "128px 128px" }} />
             <div className="dark:hidden absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(255, 255, 255, 1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 1) 1px, transparent 1px)", backgroundSize: "128px 128px" }} />
@@ -51,9 +51,9 @@ export default function ContactPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 <AnimatedSection direction="down" className="text-center mb-20 max-w-3xl mx-auto">
-                    <h1 className="text-5xl md:text-6xl font-black text-zinc-900 dark:text-white mb-6 tracking-tighter uppercase">Contact Us</h1>
+                    <h1 className="text-5xl md:text-6xl font-black text-neutral-900 dark:text-white mb-6 tracking-tighter uppercase">Contact Us</h1>
                     <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-                    <p className="text-xl text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed">
+                    <p className="text-xl text-neutral-600 dark:text-neutral-400 font-medium leading-relaxed">
                         Our engineering team is ready to assist you with sales inquiries, technical support, and partnership opportunities.
                     </p>
                 </AnimatedSection>
@@ -63,18 +63,18 @@ export default function ContactPage() {
                     {/* Contact Details & Map */}
                     <div className="space-y-12">
                         <AnimatedSection direction="left">
-                            <div className="bg-zinc-50 dark:bg-zinc-900 rounded-sm p-10 border border-zinc-200 dark:border-zinc-800">
-                                <h2 className="text-3xl font-black text-zinc-900 dark:text-white mb-10 tracking-tighter uppercase">Corporate Headquarters</h2>
+                            <div className="bg-neutral-50 dark:bg-neutral-900 rounded-sm p-10 border border-neutral-200 dark:border-neutral-800">
+                                <h2 className="text-3xl font-black text-neutral-900 dark:text-white mb-10 tracking-tighter uppercase">Corporate Headquarters</h2>
 
                                 <StaggerContainer className="space-y-10" staggerChildren={0.1}>
                                     <StaggerItem direction="up">
                                         <div className="flex items-start group">
-                                            <div className="bg-white dark:bg-zinc-950 p-4 border border-zinc-200 dark:border-zinc-800 rounded-sm mr-6 group-hover:border-accent transition-all duration-300">
+                                            <div className="bg-white dark:bg-neutral-950 p-4 border border-neutral-200 dark:border-neutral-800 rounded-sm mr-6 group-hover:border-accent transition-all duration-300">
                                                 <MapPin className="text-accent w-7 h-7" />
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-zinc-900 dark:text-white mb-2 text-lg uppercase tracking-wide">Address</h3>
-                                                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
+                                                <h3 className="font-bold text-neutral-900 dark:text-white mb-2 text-lg uppercase tracking-wide">Address</h3>
+                                                <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed font-medium">
                                                     No. 2800 C, Ashok Gali<br />Mori Gate, New Delhi-110006<br />Delhi, India
                                                 </p>
                                             </div>
@@ -83,13 +83,13 @@ export default function ContactPage() {
 
                                     <StaggerItem direction="up">
                                         <div className="flex items-start group">
-                                            <div className="bg-white dark:bg-zinc-950 p-4 border border-zinc-200 dark:border-zinc-800 rounded-sm mr-6 group-hover:border-accent transition-all duration-300">
+                                            <div className="bg-white dark:bg-neutral-950 p-4 border border-neutral-200 dark:border-neutral-800 rounded-sm mr-6 group-hover:border-accent transition-all duration-300">
                                                 <Phone className="text-accent w-7 h-7" />
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-zinc-900 dark:text-white mb-2 text-lg uppercase tracking-wide">Phone</h3>
-                                                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
-                                                    <span className="text-zinc-900 dark:text-zinc-300 font-semibold">Manpreet Singh</span><br />
+                                                <h3 className="font-bold text-neutral-900 dark:text-white mb-2 text-lg uppercase tracking-wide">Phone</h3>
+                                                <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed font-medium">
+                                                    <span className="text-neutral-900 dark:text-neutral-300 font-semibold">Manpreet Singh</span><br />
                                                     +91 98183 94355, +91 92123 10957<br />
                                                     Mon-Sat, 10 AM - 7 PM
                                                 </p>
@@ -99,12 +99,12 @@ export default function ContactPage() {
 
                                     <StaggerItem direction="up">
                                         <div className="flex items-start group">
-                                            <div className="bg-white dark:bg-zinc-950 p-4 border border-zinc-200 dark:border-zinc-800 rounded-sm mr-6 group-hover:border-accent transition-all duration-300">
+                                            <div className="bg-white dark:bg-neutral-950 p-4 border border-neutral-200 dark:border-neutral-800 rounded-sm mr-6 group-hover:border-accent transition-all duration-300">
                                                 <Mail className="text-accent w-7 h-7" />
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-zinc-900 dark:text-white mb-2 text-lg uppercase tracking-wide">Email</h3>
-                                                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
+                                                <h3 className="font-bold text-neutral-900 dark:text-white mb-2 text-lg uppercase tracking-wide">Email</h3>
+                                                <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed font-medium">
                                                     <a href="mailto:gurubearingcompany@gmail.com" className="hover:text-accent transition-colors">gurubearingcompany@gmail.com</a>
                                                 </p>
                                             </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
 
                         {/* Contact Map */}
                         <AnimatedSection direction="up" delay={0.2}>
-                            <div className="bg-zinc-200 dark:bg-zinc-900 rounded-sm overflow-hidden relative h-[350px] border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
+                            <div className="bg-neutral-200 dark:bg-neutral-900 rounded-sm overflow-hidden relative h-[350px] border border-neutral-200 dark:border-neutral-800 flex items-center justify-center">
                                 <iframe 
                                     src="https://maps.google.com/maps?q=No.%202800%20C,%20Ashok%20Gali,%20Mori%20Gate,%20New%20Delhi-110006,%20Delhi,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                                     className="w-full h-full grayscale-[100%] contrast-[1.2] dark:invert dark:grayscale-[100%] dark:opacity-70 transition-all duration-700" 
@@ -133,10 +133,10 @@ export default function ContactPage() {
 
                     {/* Contact Form */}
                     <AnimatedSection direction="right" delay={0.1}>
-                        <div className="bg-white dark:bg-zinc-950 rounded-sm p-10 md:p-14 border border-zinc-200 dark:border-zinc-800 h-full relative">
+                        <div className="bg-white dark:bg-neutral-950 rounded-sm p-10 md:p-14 border border-neutral-200 dark:border-neutral-800 h-full relative">
 
-                            <h2 className="text-3xl font-black text-zinc-900 dark:text-white mb-2 tracking-tighter uppercase">Send a Message</h2>
-                            <p className="text-zinc-500 mb-10 font-medium">We usually respond within 24 hours.</p>
+                            <h2 className="text-3xl font-black text-neutral-900 dark:text-white mb-2 tracking-tighter uppercase">Send a Message</h2>
+                            <p className="text-neutral-500 mb-10 font-medium">We usually respond within 24 hours.</p>
 
                             <AnimatePresence mode="wait">
                                 {status === "success" ? (
